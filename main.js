@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow,session} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,7 +12,11 @@ function createWindow () {
   // and load the index.html of the app.
   // mainWindow.loadFile('index.html')
   
-
+  session.defaultSession.cookies.get({url: 'http://staging.erp.youtulink.com'}, (error, cookies) => {
+    console.log(error, cookies)
+  })
+  var cookie = { url : "http://staging.erp.youtulink.com/admin/login", name : "user[email]", value : "" };
+  session.defaultSession.cookies.set(cookie, function(error) {})
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 

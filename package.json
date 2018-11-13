@@ -1,0 +1,25 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "asar": true,
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . 'Hosts' --platform=win32 --arch=x64  --out=./dist --asar --app-version=1.0.0"
+  },
+  "repository": "ssh://git@gitlab.ys3.youtulink.com:22222/youtulink/erp_window.git",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.4",
+    "electron-packager": "^12.2.0"
+  }
+}
